@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webchat</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+	<link rel="stylesheet" href="css/webchat.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-title">Webchat</div>
+            <div class="status">
+                <div class="status-dot"></div>
+                <span>Live</span>
+            </div>
+        </div>
+
+        <div id="errorContainer"></div>
+
+        <div class="messages-container" id="messagesContainer">
+            <div class="empty-state">
+                <div class="empty-state-icon">💬</div>
+                <div class="empty-state-text">
+                    Enter your name and start chatting. Messages are saved to Supabase.
+                </div>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <div class="input-row">
+                <input
+                    type="text"
+                    id="usernameInput"
+                    class="username-input"
+                    placeholder="Your name"
+                    maxlength="30"
+                />
+                <textarea
+                    id="messageInput"
+                    class="message-input"
+                    placeholder="Type a message..."
+                    rows="1"
+                ></textarea>
+                <button class="send-btn" id="sendBtn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/webchat.js"></script>
+</body>
+</html>
